@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PFT-gq-ayD">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Picker-->
+        <scene sceneID="laQ-8H-0de">
+            <objects>
+                <viewController title="Image Picker" id="PFT-gq-ayD" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d0n-FA-3Hw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vf-Hr-eg6">
+                                <rect key="frame" x="16" y="806" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zUd-eq-ttX"/>
+                                </constraints>
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="shuffle:" destination="PFT-gq-ayD" eventType="touchUpInside" id="6ZH-QN-E64"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-gG-kub">
+                                <rect key="frame" x="0.0" y="367" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="PPC-hO-ehd"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="PFT-gq-ayD" id="P8E-Ad-03c"/>
+                                    <outlet property="delegate" destination="PFT-gq-ayD" id="Tfz-x1-3Rr"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mbl-gG-kub" firstAttribute="centerY" secondItem="d0n-FA-3Hw" secondAttribute="centerY" id="0ff-zr-Uyv"/>
+                            <constraint firstItem="7Vf-Hr-eg6" firstAttribute="leading" secondItem="Fvd-nO-taw" secondAttribute="leading" constant="16" id="6S0-7F-Ko5"/>
+                            <constraint firstItem="Fvd-nO-taw" firstAttribute="trailing" secondItem="7Vf-Hr-eg6" secondAttribute="trailing" constant="16" id="V1y-Qx-c6G"/>
+                            <constraint firstItem="Mbl-gG-kub" firstAttribute="trailing" secondItem="Fvd-nO-taw" secondAttribute="trailing" id="eRE-lh-Qly"/>
+                            <constraint firstItem="Mbl-gG-kub" firstAttribute="leading" secondItem="Fvd-nO-taw" secondAttribute="leading" id="fd3-0N-N4r"/>
+                            <constraint firstItem="Fvd-nO-taw" firstAttribute="bottom" secondItem="7Vf-Hr-eg6" secondAttribute="bottom" constant="16" id="iHe-fG-ezy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fvd-nO-taw"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="Mbl-gG-kub" id="Kbn-uh-4WR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSe-7Z-Mcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="877"/>
+        </scene>
+    </scenes>
+</document>
